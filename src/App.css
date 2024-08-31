@@ -1,0 +1,14 @@
+
+.Parent-div{
+    background-color: rgb(246, 129, 5);
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-size: 30px;
+}

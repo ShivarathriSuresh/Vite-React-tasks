@@ -1,0 +1,16 @@
+
+.table{
+    color: rgb(42, 42, 165);
+    border: 2px dotted red;
+
+}
+
+.card{
+    display:inline-block ;
+    width: 300px;
+    height: 400px;
+    border: 2px solid violet;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
