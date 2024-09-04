@@ -1,10 +1,12 @@
 
 import { useState } from "react"
 import { ReusableTable } from "../../../../ReuseTable"
+import { countries,indianStates } from "../../../../countries and states"
 
  export const ControlledStateForm = () =>{
 
-    const [formData,setFormData] = useState({
+    const [formData,setFormData] = useState(
+        {
         userName:"",
         countryName:"",
         stateName:""
@@ -22,12 +24,9 @@ import { ReusableTable } from "../../../../ReuseTable"
       event.preventDefault();
         setSubmittedData([...submittedData,formData])
       console.log(formData);
-      setFormData({
-        userName:"",
+      setFormData({userName:"",
         countryName:"",
-        stateName:""
-
-      })
+        stateName:""})
       
        }
    
@@ -81,25 +80,36 @@ import { ReusableTable } from "../../../../ReuseTable"
       {formErr.nameErr&&<span style={{color:"red"}} >{formErr.nameErr}</span>}<br/>
 
      <label for="countryName"> CountryName :</label>
-     <input type="text" id="country" placeholder="Enter CountryName" 
-
-     name="countryName"
+     <select  name="countryName"
      value={formData.countryName}
      onChange={onChangeHandler}
-
-     /><br/>
+>
+     {countries.map((eachCountry)=>{
+        return (
+            <>
+            <option>Select Your Country</option>
+            <option>{eachCountry}</option>
+            </>
+        )
+     })}
+     </select><br/>
 
 {formErr.countryErr&&<span style={{color:"red"}} >{formErr.countryErr}</span>}<br/>
 
 
      <label for="state"> StateName :</label>
-     <input type="text" id="state" placeholder="Enter StateName" 
-
-     name="stateName"
+     <select name="stateName"
      value={formData.stateName}
-     onChange={onChangeHandler}
-
-     /><br/>
+     onChange={onChangeHandler}>
+        {indianStates.map((eachState)=>{
+            return(
+                <>
+               <option>Select Your State</option>
+                <option>{eachState}</option>
+                </>
+            )
+        })}
+        </select><br/>
 
 {formErr.stateErr&&<span style={{color:"red"}} >{formErr.stateErr}</span>}<br/>
 
