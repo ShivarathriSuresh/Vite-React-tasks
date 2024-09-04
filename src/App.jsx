@@ -1,18 +1,17 @@
 
-import  YoutubeButton  from "./Components/Class comp/youtubebutton";
 
+import React from 'react'
+import { ControlledStateForm } from './Components/Hooks in func/ReactForms/controlledstate';
 
+function App() {
+  return (
+    <div>
 
-const App=()=>{
-  return(
-    <>
-    <YoutubeButton/>
-    </>
+      <ControlledStateForm/>
+    </div>
   )
 }
 
-export default App;
-
-
+export default App
 
 
