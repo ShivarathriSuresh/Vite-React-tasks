@@ -12,3 +12,70 @@
     border-radius: 10px;
     font-size: 30px;
 }
+
+
+.web-page{
+      display: flex;
+      height: 44rem;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      color: rgb(251, 120, 5);
+      background-image:url("https://static.vecteezy.com/system/resources/thumbnails/001/849/553/small_2x/modern-gold-background-free-vector.jpg") ;
+
+}
+
+
+.btn1 {
+        display:inline-block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color:black ;
+        color: white;
+        padding: 6px 18px;
+        border-radius: 8px;
+        margin-right: 50px;
+        margin-top: 20px;
+}
+
+.btn2{
+    display:inline-block;
+    position: absolute;
+    top: 0px;
+    right: 150px;
+    background-color:black ;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 8px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.sub-btn{
+    background-color: rgb(7, 245, 42);
+    color: rgba(8, 8, 8, 0.996);
+    border-radius: 8px;
+    padding: 8px 20px;
+}
+
+.regi-btn{
+     background-color: rgb(241, 68, 10);
+     color: antiquewhite;
+     border-radius: 8px;
+     padding: 8px 20px;
+}
+
+.nav-item{
+     margin-left: 20px;
+     padding: 10px;
+}
+
+.nav-item :active{
+       color: magenta;
+}
+
+.links{
+    text-decoration: none;
+    color:rgb(255, 130, 5) ;
+}

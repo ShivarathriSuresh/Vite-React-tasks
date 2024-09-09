@@ -1,6 +1,6 @@
 
 import { useState } from "react"
-import { ReusableTable } from "../../../../ReuseTable"
+import ReusableTable from "../../../../ReuseTable"
 import { countries,indianStates } from "../../../../countries and states"
 
  export const ControlledStateForm = () =>{
@@ -22,7 +22,12 @@ import { countries,indianStates } from "../../../../countries and states"
 
    const onSubmit =(event)=>{
       event.preventDefault();
-        setSubmittedData([...submittedData,formData])
+      const newFormData={
+         data1:formData.userName,
+         data2:formData.countryName,
+         data3:formData.stateName
+      }
+        setSubmittedData([...submittedData,newFormData])
       console.log(formData);
       setFormData({userName:"",
         countryName:"",
@@ -83,11 +88,12 @@ import { countries,indianStates } from "../../../../countries and states"
      <select  name="countryName"
      value={formData.countryName}
      onChange={onChangeHandler}
->
+>         <option>Select Your Country</option>
      {countries.map((eachCountry)=>{
         return (
             <>
-            <option>Select Your Country</option>
+            
+            
             <option>{eachCountry}</option>
             </>
         )
@@ -101,10 +107,12 @@ import { countries,indianStates } from "../../../../countries and states"
      <select name="stateName"
      value={formData.stateName}
      onChange={onChangeHandler}>
+               <option>Select Your State</option>
+
         {indianStates.map((eachState)=>{
             return(
                 <>
-               <option>Select Your State</option>
+               
                 <option>{eachState}</option>
                 </>
             )
