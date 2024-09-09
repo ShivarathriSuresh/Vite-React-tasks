@@ -13,6 +13,10 @@
     font-size: 30px;
 }
 
+table{
+     
+      border: 2px solid black;
+}
 
 .web-page{
       display: flex;

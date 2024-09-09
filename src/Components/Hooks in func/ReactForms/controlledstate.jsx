@@ -50,15 +50,15 @@ import { countries,indianStates } from "../../../../countries and states"
         case "userName":
             errors.nameErr = value ? "" : "User name is required";
                 break;
-            //userName validation 
+        
         case "countryName":
             errors.countryErr = value ? "" : "User name is required";
                 break;
-            //countryName validation 
+    
         case "stateName":
             errors.stateErr = value ? "" : "User name is required";
                 break;
-            //stateName validation   
+         
             default:
                 break;     
 

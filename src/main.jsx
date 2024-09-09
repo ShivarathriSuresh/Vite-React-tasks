@@ -9,10 +9,8 @@ import FakeDataComponent from './Components/Hooks in func/useEffect/fetchData.js
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <BrowserRouter>
-    <NavigationStack/>
-    </BrowserRouter> */}
+   
 
-    <FakeDataComponent/>
+   <App/> 
   </StrictMode>
 )
