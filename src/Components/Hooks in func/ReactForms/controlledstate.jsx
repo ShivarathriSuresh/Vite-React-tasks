@@ -1,7 +1,8 @@
 
 import { useState } from "react"
-import ReusableTable from "../../../../ReuseTable"
+import ReusableTable from "./ReuseTable"
 import { countries,indianStates } from "../../../../countries and states"
+import "../../../App.css"
 
  export const ControlledStateForm = () =>{
 
