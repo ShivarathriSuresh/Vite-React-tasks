@@ -3,11 +3,13 @@ import CustomRectangleCard from "../Props examples/CustomCard";
 import {personsDetails} from "../FakeData/sample data";
 import { useEffect, useState } from "react";
 
+
  const CustomFrontPage = ()=>{
   const [products, setProducts] = useState([]);
+
   const fetchProductsData = async () => {
     try{
-      const response = await fetch('https://dummyjson.com/products');
+      const response = await fetch("https://dummyjson.com/products");
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
@@ -19,10 +21,11 @@ import { useEffect, useState } from "react";
         
     }
   };
-  // fetchProductsData();
+  // fetchCartsData();
     useEffect(() => {
       fetchProductsData()
-    }, [])
+    }, []);
+
     return (
         <>
 
@@ -33,17 +36,17 @@ import { useEffect, useState } from "react";
   <div className="container mt-5">
     <div className="row">
 
-      {personsDetails.map((eachPerson)=>{
+      {/* {personsDetails.map((eachPerson)=>{
         return (
           <CustomRectangleCard source={eachPerson.image} Name={eachPerson.personName} />
           
         )
-      })}
+      })} */}
 
-      {products.map((eachproduct)=>{
+      {products.map((eachProduct)=>{
         return(
           <>
-          <CustomRectangleCard source={eachproduct.thumbnail} Name={eachproduct.title} />
+          <CustomRectangleCard source={eachProduct.thumbnail} Name={eachProduct.title} />
           </>
         )
       })}

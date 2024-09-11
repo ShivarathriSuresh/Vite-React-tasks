@@ -1,14 +1,16 @@
 
-
 import React from 'react'
-import { ControlledStateForm } from './Components/Hooks in func/ReactForms/controlledstate'
+
+import CustomFrontPage from './Components/React Bootstrap/Bootstrap exam'
 
 
 function App() {
   return (
     <div>
      
-      <ControlledStateForm/>
+
+       <CustomFrontPage/>
+
     </div>
   )
 }

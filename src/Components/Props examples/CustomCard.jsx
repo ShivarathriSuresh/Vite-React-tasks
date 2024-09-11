@@ -28,7 +28,7 @@ function CustomRectangleCard({Name,JobRole,source}) {
         </Card.Text>
         {loading && <><CustomRotatingLinesLoader height={70} width={70} visible={"true"}  />
         <CustomVortexLoader/></>}
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Add To Cart</Button>
       </Card.Body>
       <CustomToast/>
     </Card>
