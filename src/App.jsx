@@ -1,15 +1,14 @@
 
 import React from 'react'
+import FakeDataComponent from './Components/Hooks in func/useEffect/fetchData'
 
-import CustomFrontPage from './Components/React Bootstrap/Bootstrap exam'
 
 
 function App() {
   return (
     <div>
      
-
-       <CustomFrontPage/>
+      <FakeDataComponent/>
 
     </div>
   )

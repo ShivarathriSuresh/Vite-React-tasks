@@ -1,12 +1,14 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import CustomRectangleCard from "../../Props examples/CustomCard"
+import "../../../App.css"
 
 
 const FakeDataComponent=()=>{
 
      const [data,setData]=useState([])
 
-     const [type,setType]=useState("products")
+     const [type,setType]=useState("Products")
 
      useEffect(()=>{
       fetchData();
@@ -37,17 +39,29 @@ const FakeDataComponent=()=>{
     return (
 
         <>
-        <h2>useEffect Example</h2>
+        <div  className="apiHandler">
 
         {
-        ["products","carts","users"].map(each=><button onClick={()=>typeHandler(each)}>{each}</button>)
+        ["Products","Carts","Users"].map(each=><button onClick={()=>typeHandler(each)}  className="btns">{each}</button>)
         }
+        </div> 
 
-        <h2>{type}</h2>
+        
+        <h1><u>{type}</u></h1>
 
+        <div className="items">
         {
-         data.map((eachProduct)=> <pre>  {JSON.stringify(eachProduct)}   </pre>) 
+         data.map((eachProduct)=>{ 
+             return(
+              <>
+                 
+              <CustomRectangleCard  source={eachProduct.image}  Name={eachProduct.title} price={eachProduct.price}/>
+
+               </>   
+             )
+        }) 
          }
+         </div>
         </>
     ) 
 }

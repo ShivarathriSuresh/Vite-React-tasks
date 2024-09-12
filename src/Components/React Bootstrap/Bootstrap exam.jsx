@@ -2,6 +2,7 @@
 import CustomRectangleCard from "../Props examples/CustomCard";
 import {personsDetails} from "../FakeData/sample data";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 
  const CustomFrontPage = ()=>{
@@ -9,13 +10,15 @@ import { useEffect, useState } from "react";
 
   const fetchProductsData = async () => {
     try{
-      const response = await fetch("https://dummyjson.com/products");
+      const response = await axios.get("https://dummyjson.com/products");
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
 
       const data = await response.json();
       setProducts(data.products)
+
+
     }catch{
         console.error('err');
         
