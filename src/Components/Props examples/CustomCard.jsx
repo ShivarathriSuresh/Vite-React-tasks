@@ -20,7 +20,7 @@ function CustomRectangleCard({Name,price,source}) {
 
 
     <Card  style={{ width: '18rem',margin:15 }}>
-      <Card.Img variant="top" src={source}  height={350}/>
+      <Card.Img variant="top" src={source}  height={400}/>
       <Card.Body>
         <Card.Title>{Name}</Card.Title>
         <Card.Text>

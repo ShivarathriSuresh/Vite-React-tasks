@@ -2,7 +2,6 @@
 import CustomRectangleCard from "../Props examples/CustomCard";
 import {personsDetails} from "../FakeData/sample data";
 import { useEffect, useState } from "react";
-import axios from "axios";
 
 
  const CustomFrontPage = ()=>{
@@ -10,7 +9,7 @@ import axios from "axios";
 
   const fetchProductsData = async () => {
     try{
-      const response = await axios.get("https://dummyjson.com/products");
+      const response = await fetch("https://dummyjson.com/products");
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
@@ -24,7 +23,7 @@ import axios from "axios";
         
     }
   };
-  // fetchCartsData();
+  // fetchProductsData();
     useEffect(() => {
       fetchProductsData()
     }, []);
@@ -39,12 +38,12 @@ import axios from "axios";
   <div className="container mt-5">
     <div className="row">
 
-      {/* {personsDetails.map((eachPerson)=>{
+      {personsDetails.map((eachPerson)=>{
         return (
           <CustomRectangleCard source={eachPerson.image} Name={eachPerson.personName} />
           
         )
-      })} */}
+      })}
 
       {products.map((eachProduct)=>{
         return(
