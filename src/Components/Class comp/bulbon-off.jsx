@@ -7,7 +7,7 @@ import { Component } from "react";
     class CustomBulb extends Component {
 
       state={
-          bulb:false
+          bulb:true
       }
   
       clickBulbOnHandler=()=>{
