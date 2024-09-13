@@ -24,7 +24,7 @@ function CustomRectangleCard({Name,price,source}) {
       <Card.Body>
         <Card.Title>{Name}</Card.Title>
         <Card.Text>
-         Price : {price}
+        Price :{price}
         </Card.Text>
         {loading && <><CustomRotatingLinesLoader height={70} width={70} visible={"true"}  />
         <CustomVortexLoader/></>}

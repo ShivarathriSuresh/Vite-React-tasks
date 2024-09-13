@@ -40,7 +40,7 @@ import { useEffect, useState } from "react";
 
       {personsDetails.map((eachPerson)=>{
         return (
-          <CustomRectangleCard source={eachPerson.image} Name={eachPerson.personName} />
+          <CustomRectangleCard source={eachPerson.image} Name={eachPerson.personName} price={eachPerson.price}/>
           
         )
       })}
@@ -48,7 +48,7 @@ import { useEffect, useState } from "react";
       {products.map((eachProduct)=>{
         return(
           <>
-          <CustomRectangleCard source={eachProduct.thumbnail} Name={eachProduct.title} />
+          <CustomRectangleCard source={eachProduct.thumbnail} Name={eachProduct.title} price={eachProduct.price}/>
           </>
         )
       })}
