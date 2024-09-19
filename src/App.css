@@ -1,41 +1,44 @@
 
 
-button {
-    background-color: #9909f9;
-    color: white;
-    padding: 8px 15px;
-    border: 2px solid black;
-    cursor: pointer;
-    
+.Parent-div {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
 }
 
-.btns {
-    margin-right: 150px;
-    border-radius: 8px;
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
 }
 
-h1{
-    text-align: center;
+.button:hover {
+  background-color: #0056b3;
+}
+
+.subscribed-message {
+  font-size: 20px;
+  color: #333;
+  text-align: center;
 }
 
 
-button:hover {
-    background-color: #45a049;
+.not-subscribed-message {
+  font-size: 18px;
+  color: #888;
+  text-align: center;
 }
 
 
-.apiHandler {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    background-color: blue;
-    width: 100%;
-    height:45px ;
-}
-
- .items{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
- }
